@@ -33,14 +33,14 @@ export class App extends Component {
       <div>
         <br>
         </br>
-        <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;position:absolute;">
+        <canvas className = "mapa" id="myCanvas" width="600" height="600" >
           Your browser does not support the HTML5 canvas tag.
         </canvas>
         <ColombiaMap
-          class = "mapa"
+          className = "mapa"
           width="600"
           height="600"
-          sytle="position:absolute; text-align:center;"
+
           data={{RISARALDA:10, CALDAS:12}}
           ></ColombiaMap>
           <br>
