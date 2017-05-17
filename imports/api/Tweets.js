@@ -25,10 +25,10 @@ if (Meteor.isServer) {
       // Create the Twitter object
       //Es necesario definir las variables de entorno aqui:
       let client = new Twitter({
-        consumer_key: "R5VW0CzCdFA0EsHrPTE2PYdEV",
-        consumer_secret: "TK3SQM4FQnptXHum9nBiVJ6s283ElecOWz8JEdocZZsj4XZxFF",
-        access_token_key: 	"597663424-EmPNVgdLll9tCQ8S3jDhinQ4qQPXRDcieso67Y4r",
-        access_token_secret: 	"gDhgbe9xhQzNpxSMaKRqNt35ObwdBrWxXp9rVNhcYh8Xr"
+        consumer_key: "",
+        consumer_secret: "",
+        access_token_key: 	"",
+        access_token_secret: 	""
       });
 
       if (stream) {
