@@ -1,18 +1,45 @@
 <head>
-  <title>Twitter streamer</title>
+  <title>Twitter streamer Colombia</title>
   <style>
   .mapa {
-
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    z-index: 5;
   }
 
+  svg{
+    position: absolute;
+    border-radius: 25px;
+    top: 80px;
+    left: 10px;
+  }
+
+  .listaTweets{
+    position: absolute;
+    left: 640px;
+    top: 80px;
+    right: 5%;
+  }
+
+  .tweetUnit{
+    border-radius: 25px;
+    background-color: white;
+    padding: 20px;
+  }
+
+  img {
+      border-radius: 50%;
+  }
   body{
-    top:0;
-    text-align: center;
-    margin:0;
+    background-color: #DCDCDC;
+
   }
   </style>
 </head>
 
+
 <body>
+  <h1>Tweets en Colombia</h1>
   <div id="render-target"></div>
 </body>

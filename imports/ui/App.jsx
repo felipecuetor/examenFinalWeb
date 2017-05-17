@@ -3,15 +3,15 @@ import {PropTypes} from "prop-types";
 import { Meteor } from "meteor/meteor";
 import ColombiaMap from "./ColombiaMap.jsx";
 import { createContainer} from "meteor/react-meteor-data"
-import './mapa.css';
 
 import TweetsResults from "./TweetsResults.jsx";
 import {Tweets} from "../api/Tweets.js";
 
+import {proj} from "./ColombiaMap.jsx";
+
 export class App extends Component {
   constructor(props) {
     super(props);
-
   }
 
   changeQuery(evt) {
@@ -23,6 +23,11 @@ export class App extends Component {
 
     console.log(evt.target.value);
     Meteor.call("twitter.stream", evt.target.value);
+
+  }
+
+  updateMap(){
+    print("Update Map");
 
   }
 
@@ -45,6 +50,7 @@ export class App extends Component {
           ></ColombiaMap>
           <br>
           </br>
+          <div className = "listaTweets">
           <input type="text" onKeyPress={this.changeQuery.bind(this)} placeholder="Query"/>
           { this.props && this.props.err ?
             <div>Error: {this.props.err}</div> :
@@ -57,6 +63,7 @@ export class App extends Component {
           <TweetsResults tweets={this.props.tweets}/> :
           <p>Enter a query</p>
         }
+      </div>
 
       </div>
     );
