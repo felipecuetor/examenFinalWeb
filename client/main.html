@@ -1,11 +1,16 @@
 <head>
   <title>Twitter streamer Colombia</title>
   <style>
+  h1{
+
+  }
+
   .mapa {
     position: absolute;
     top: 80px;
     left: 10px;
     z-index: 5;
+    pointer-events:none;
   }
 
   svg{
@@ -33,6 +38,7 @@
   }
   body{
     background-color: #DCDCDC;
+    font-family: "Arial", Arial, serif;
 
   }
   </style>
@@ -40,6 +46,6 @@
 
 
 <body>
-  <h1>Tweets en Colombia</h1>
+
   <div id="render-target"></div>
 </body>

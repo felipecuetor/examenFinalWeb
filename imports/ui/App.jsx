@@ -7,11 +7,11 @@ import { createContainer} from "meteor/react-meteor-data"
 import TweetsResults from "./TweetsResults.jsx";
 import {Tweets} from "../api/Tweets.js";
 
-import {proj} from "./ColombiaMap.jsx";
 
 export class App extends Component {
   constructor(props) {
     super(props);
+    this.comp = ":D";
   }
 
   changeQuery(evt) {
@@ -23,12 +23,6 @@ export class App extends Component {
 
     console.log(evt.target.value);
     Meteor.call("twitter.stream", evt.target.value);
-
-  }
-
-  updateMap(){
-    print("Update Map");
-
   }
 
 
@@ -36,6 +30,8 @@ export class App extends Component {
     console.log("render!");
     return (
       <div>
+        <h1>Tweets en Colombia  {this.comp}</h1>
+
         <br>
         </br>
         <canvas className = "mapa" id="myCanvas" width="600" height="600" >
@@ -76,6 +72,8 @@ App.propTypes = {
 
 export default AppContainer = createContainer(() => {
   Meteor.subscribe("tweets");
+
+  Meteor.subscribe("face");
 
 
   return {
